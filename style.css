@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+html, body {
+    background-color: #f3f3f4;
+    position: relative;
+}
+/* TOAST BUTTON */
+.toast__button {
+    width: 80%;
+    margin: 350px auto 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.toast__element {
+    padding: 12px 80px;
+    border-radius: 50px;
+    color: white;
+}
+.toast__element:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+/* TOAST MESSAGE */
+.toast__message, .message {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    align-items: center;
+}
+.toast__message {
+    width: 30%;
+    position: absolute;
+    top: -300px;
+    right: 40px;
+    background-color: white;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    display: none;
+}
+.toast__content .active {
+    display : flex;
+    animation: slideInLeft ease 0.5s, fadeOut linear 1s 2s forwards;
+}
+.message__text {
+    padding: 5px 10px;
+}
+.message__text p {
+    color : #929292;
+    font-size: 0.75rem;
+    padding: 5px 0;
+}
+.toast__message i {
+    font-size: 1.5rem;
+}
+.toast__message i:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+/* COLOR */
+.success {
+    background-color: #6CB635;
+}
+.info {
+    background-color: #0CB9DC;
+}
+.warning {
+    background-color: #FFCA2C;
+}
+.error {
+    background-color: #FF623D;
+}
+.green {
+    color: #6CB635;
+}
+.blue {
+    color: #0CB9DC;
+}
+.yellow {
+    color: #FFCA2C;
+}
+.orange {
+    color: #FF623D;
+}
+.grey {
+    color: #c3c1c3;
+}
+.success__message {
+    border-left: 5px solid #6CB635;
+}
+.info__message {
+    border-left: 5px solid #0CB9DC;
+}
+.warning__message {
+    border-left: 5px solid #FFCA2C;
+}
+.error__message {
+    border-left: 5px solid #FF623D;
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
