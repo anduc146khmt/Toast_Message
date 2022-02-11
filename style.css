@@ -117,3 +117,16 @@ html, body {
         opacity: 0;
     }
 }
+@media screen and (max-width: 450px) {
+    .toast__button {
+        display: block;
+        margin : 50vh auto;
+        width: 90%;
+    }
+    .toast__element {
+        margin-bottom: 10px;
+    }
+    .toast__message {
+        width: 80%;
+    }
+}
